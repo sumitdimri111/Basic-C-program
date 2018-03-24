@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Calculator </title>
+		<style type="text/css">
+			table, td
+			{
+				border: 1px solid black;
+				order-collapse: collapse;
+				width: 30%;
+				padding: 8px;
+			}
+
+			.button
+			{
+				padding: 20px 20px;
+				font-size: 30px;
+				background-color: yellow;
+			}
+		</style>
+		<script type="text/javascript">
+			function x()
+			{
+				inputNum("="+eval(document.getElementById('i').value))
+			}
+			function inputNum(n)
+			{
+				document.calculator.ans.value += n;
+			}
+		</script>
+	</head>
+	<body>
+		<form name="calculator">
+			<table>
+				
+				<tr>
+				<td colspan="4"> <input type="text" name="ans" value="" id="i" style="width:100%;"> </td>
+				</tr>
+				
+				<tr>
+				<td> <input class="button" type="button" name="1" value="1" onclick="inputNum('1')"> </td>
+				<td> <input class="button" type="button" name="2" value="2" onclick="inputNum('2')"> </td>
+				<td> <input class="button" type="button" name="3" value="3" onclick="inputNum('3')"> </td>
+				<td> <input class="button" type="button" name="+" value="+" onclick="inputNum('+')"> </td>
+				</tr>
+
+				<tr>
+				<td> <input class="button" type="button" name="4" value="4" onclick="inputNum('4')"> </td>
+				<td> <input class="button" type="button" name="5" value="5" onclick="inputNum('5')"> </td>
+				<td> <input class="button" type="button" name="6" value="6" onclick="inputNum('6')"> </td>
+				<td> <input class="button" type="button" name="-" value="-" onclick="inputNum('-')"> </td>
+				</tr>
+
+				<tr>
+				<td> <input class="button" type="button" name="7" value="7" onclick="inputNum('7')"> </td>
+				<td> <input class="button" type="button" name="8" value="8" onclick="inputNum('8')"> </td>
+				<td> <input class="button" type="button" name="9" value="9" onclick="inputNum('9')"> </td>
+				<td> <input class="button" type="button" name="*" value="*" onclick="inputNum('*')"> </td>
+				</tr>
+
+				<tr>
+				<td> <input class="button" type="button" name="0" value="0" onclick="inputNum('0')"> </td>
+				<td> <input class="button" type="button" name="." value="." onclick="inputNum('.')"> </td>
+				<td> <input class="button" type="button" name="=" value="=" onclick="x()"> </td>
+				<td> <input class="button" type="button" name="/" value="/" onclick="inputNum('/')"> </td>
+				</tr>
+
+			</table>
+		</form>
+	</body>
+</html>
